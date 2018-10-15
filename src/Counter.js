@@ -5,13 +5,9 @@ class Counter extends Component {
     count: 0
   };
 
-  increment = () => {
-    this.setState({ count: this.state.count + 1 });
-  };
+  increment = () => this.setState(state => ({ count: state.count + 1 }));
 
-  decrement = () => {
-    this.setState({ count: this.state.count - 1 });
-  };
+  decrement = () => this.setState(state => ({ count: state.count - 1 }));
 
   render() {
     return (
